@@ -3,12 +3,12 @@ const express = require("express");
 
 const app = express();
 
-app.get("/api",(req,res)=>{
+app.get("/",(req,res)=>{
     res.status(200).send({Message:"Server is running on port 9000."})
 })
 
 app.post("/login",(req,res)=>{
-    
+
     const {email,password} = req.query;
 
     if(!email){
